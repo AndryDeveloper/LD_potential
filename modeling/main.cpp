@@ -1,15 +1,13 @@
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <random>
 #include <optional>
 
 #include <future>
-#include <thread>
-
 #include <iostream>
 #include <fstream>
 
 #include <nlohmann/json.hpp>
-#define _USE_MATH_DEFINES
 using json = nlohmann::json;
 
 #include "molecule.h"

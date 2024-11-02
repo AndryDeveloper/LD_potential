@@ -12,13 +12,14 @@ E = 4 \varepsilon \left[ \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\si
 2. Установите необходимые библиотеки для постобработки:
 
    ```bash
-   pip install numpy matplotlib
+   pip install -r requirements.txt
    ```
 
 3. Для компиляции C++ кода убедитесь, что установлен CMake. Перейдите в папку `modeling` и выполните:
    
    ```bash
    cmake -B build
+   cmake --build build
    ```
 
 ## Запуск
@@ -43,13 +44,15 @@ modeling/build/main config.path results/coords.xyz results/distribution.xyz resu
 │
 ├── modeling/           # Папка с C++ кодом для расчёта
 │   ├── CMakeLists.txt  # CMake конфигурация
+│   ├── external        # Папка с внешними библиотеками
 │   ├── main.cpp        # Основной файл для расчетов
-|   ├── molecule.h      # Шаблон класс молекулы
-|   └── vector3d.h      # Шаблон трёхмерного вектора
+│   ├── molecule.h      # Шаблон класс молекулы
+│   └── vector3d.h      # Шаблон трёхмерного вектора
 │
 ├── data_processor.py   # Скрипт для постобработки
 ├── results/            # Папка для сохранения результатов
 ├── config.json         # Файл конфигурации
+├── requirements.txt    # Зависимости python
 └── README.md
 ```
 
